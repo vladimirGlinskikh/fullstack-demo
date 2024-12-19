@@ -1,0 +1,6 @@
+spring:
+  security:
+    user:
+      password: admin
+server:
+  port: 5050
