@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  db_auth:
+    image: postgres:alpine
+    container_name: fullstack_demo_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
