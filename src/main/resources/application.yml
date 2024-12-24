@@ -1,4 +1,8 @@
 spring:
+  app:
+    jwtSecret: mySecretKey123
+    jwtExpirationMs: 3000000000000000000000000
+
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
