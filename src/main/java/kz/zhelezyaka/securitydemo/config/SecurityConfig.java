@@ -1,7 +1,5 @@
 package kz.zhelezyaka.securitydemo.config;
 
-import com.zaxxer.hikari.HikariDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -41,7 +39,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(DataSource dataSource, PasswordEncoder passwordEncoder) {
+    public UserDetailsService userDetailsService(DataSource dataSource,
+                                                 PasswordEncoder passwordEncoder) {
         UserDetails user1 = User.withUsername("user1")
                 .password(passwordEncoder.encode("password1"))
                 .roles("USER")
