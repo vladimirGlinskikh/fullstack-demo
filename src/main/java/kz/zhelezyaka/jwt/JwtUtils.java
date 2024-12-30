@@ -16,8 +16,8 @@ import javax.crypto.SecretKey;
 import java.security.Key;
 import java.util.Date;
 
-@Component
 @Slf4j
+@Component
 public class JwtUtils {
 
     @Value("${spring.app.jwtSecret}")
